@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #959595;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    // overflow: hidden;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+// img {
+//     width: 100%;
+//     height: 100%;
+// }
+
+#control-btns {
+    width: 100%;
+    height: 120px;
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    button {
+        img {
+            width: 35px;
+            margin-bottom: 3px;
+        }
+    }
+
+    #microphone {
+        background-color: black;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: relative;
+        top: -50px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#slider {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    .slides {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: -70px;
+        .img {
+          width: 100%;
+          svg {
+            width: 100%;
+            display: block;
+          }  
+        }
+    }
+
+    .slider-control {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            width: 48px;
+            height: 42px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

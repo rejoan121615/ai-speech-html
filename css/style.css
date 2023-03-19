@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #959595;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#control-btns {
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  padding: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#control-btns button img {
+  width: 35px;
+  margin-bottom: 3px;
+}
+#control-btns #microphone {
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  top: -50px;
+}
+#control-btns #microphone img {
+  width: 100%;
+}
+
+#slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+#slider .slides {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: -70px;
+}
+#slider .slides .img {
+  width: 100%;
+}
+#slider .slides .img svg {
+  width: 100%;
+  display: block;
+}
+#slider .slider-control {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#slider .slider-control button {
+  width: 48px;
+  height: 42px;
+}
+#slider .slider-control button img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

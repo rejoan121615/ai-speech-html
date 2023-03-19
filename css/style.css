@@ -76,9 +76,8 @@ button {
 }
 #slider .slides .img {
   width: 100%;
-  max-width: 320px;
 }
-#slider .slides .img svg {
+#slider .slides .img img {
   width: 100%;
   display: block;
 }

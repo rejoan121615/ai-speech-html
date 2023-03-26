@@ -56,27 +56,30 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  justify-content: center;
 }
 #slider .slides {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
   grid-column: 1/-1;
   grid-row: 1/-1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: -70px;
 }
-#slider .slides svg {
-  width: 0;
-  height: 0;
+#slider .slides .svg-wrap {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
-#slider .slides .content {
-  width: 100%;
-  clip-path: url("#sm-filter #contentClipSm");
-}
-#slider .slides .content img {
-  width: 100%;
+#slider .slides .right-side {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  background-color: green;
+  clip-path: url(#smClip);
+  background: transparent url("../images/person.jpg") no-repeat center center;
+  background-size: cover;
 }
 #slider .slider-control {
   grid-column: 1/-1;
@@ -84,6 +87,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 50;
 }
 #slider .slider-control button {
   width: 48px;

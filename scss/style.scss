@@ -24,9 +24,9 @@ section {
     height: 100vh;
     // overflow: hidden;
     @include sm-desktop() {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -34,11 +34,6 @@ button {
     background-color: transparent;
     border: none;
 }
-
-// img {
-//     width: 100%;
-//     height: 100%;
-// }
 
 .container {
     width: 100%;
@@ -67,11 +62,13 @@ button {
 
     #microphone {
         background-color: black;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         position: relative;
         top: -50px;
+        z-index: 100;
+        cursor: pointer;
         img {
             width: 100%;
         }
@@ -83,21 +80,145 @@ button {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        @include tablet() {
+            height: 100%;
+            display: block;
+            position: relative;
+        }
     }
     .slides {
         grid-column: 1 / -1;
         grid-row: 1 / -1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: -70px;
+        @include tablet() {
+            margin: 0;
+            padding: 0;
+        }
         .img {
             width: 100%;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
             img {
                 width: 100%;
                 display: block;
+            }
+        }
+        .sm-img {
+            @include tablet() {
+                display: none;
+            }
+        }
+        .large-img {
+            display: none;
+            @include tablet() {
+                display: block;
+                width: 100%;
+                height: 100%;
+                // background-color: green;
+                // min-height: 500px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .slides-content {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        font-size: 15px;
+        position: relative;
+        z-index: 20;
+        .row {
+            padding-left: 20px;
+            padding-right: 20px;
+            .date {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        .text-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .user-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+        }
+
+        .user-row {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .ai-row {
+            p,
+            li {
+                color: #374151;
+            }
+        }
+
+        .ai-responce {
+            @extend .user-content;
+            align-items: flex-start;
+            height: 345px;
+            overflow: auto;
+            ul {
+                padding-left: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        .input-wrap {
+            margin-left: 13px;
+            margin-top: 15px;
+            width: 310px;
+            height: 40px;
+            position: relative;
+            input {
+                width: 100%;
+                height: 100%;
+                background-color: #fdfdfd;
+                padding: 10px;
+                border: none;
+                &:focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+            .send-con {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                right: 15px;
+                top: 12px;
+                .send-btn {
+                    width: 20px;
+                    margin-right: 12px;
+                    height: 20px;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }
@@ -108,6 +229,16 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        // position: relative;
+        // z-index: 30;
+        @include tablet() {
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            button {
+                width: 35px;
+            }
+        }
         button {
             width: 48px;
             height: 42px;
@@ -205,50 +336,6 @@ button {
         @include tablet() {
             width: 100%;
             max-width: initial;
-        }
-    }
-    #slider {
-        .container {
-            @include tablet() {
-                height: 100%;
-                display: block;
-                position: relative;
-            }
-            .slider-control {
-                @include tablet() {
-                    position: absolute;
-                    left: 10px;
-                    bottom: 15px;
-                    button {
-                        width: 35px;
-                    }
-                }
-            }
-        }
-        .slides {
-            @include tablet() {
-                margin: 0;
-                padding: 0;
-            }
-            .sm-img {
-                @include tablet() {
-                    display: none;
-                }
-            }
-            .large-img {
-                display: none;
-                @include tablet() {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    // background-color: green;
-                    // min-height: 500px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
         }
     }
 }

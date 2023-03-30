@@ -23,11 +23,11 @@ section {
     width: 100%;
     height: 100vh;
     // overflow: hidden;
-    @include sm-desktop() {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    // @include sm-desktop() {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 }
 
 button {
@@ -421,7 +421,8 @@ p {
 }
 
 // upload content
-.upload-function {
+.upload-function,
+.color-select {
     width: 100%;
     height: 100%;
     display: flex;
@@ -430,7 +431,7 @@ p {
     justify-content: center;
     button,
     .current-voice {
-        background-color: #d8d8d8;
+        background-color: #d8d8d880;
         border-radius: 50px;
         padding: 8px 25px 12px 25px;
         color: #5d5d5d;
@@ -446,7 +447,15 @@ p {
     }
 }
 
-.upload {
+.color-select {
+    button {
+        @include tablet() {
+            margin-top: 0px;
+        }
+    }
+}
+
+.upload, .color-picker {
     @include tablet() {
         .slides-content {
             display: flex !important;
@@ -457,3 +466,4 @@ p {
         }
     }
 }
+

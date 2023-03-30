@@ -11,13 +11,6 @@ section {
   width: 100%;
   height: 100vh;
 }
-@media only screen and (min-width: 1200px) {
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
 
 button {
   background-color: transparent;
@@ -419,7 +412,8 @@ button {
   }
 }
 
-.upload-function {
+.upload-function,
+.color-select {
   width: 100%;
   height: 100%;
   display: flex;
@@ -428,28 +422,38 @@ button {
   justify-content: center;
 }
 .upload-function button,
-.upload-function .current-voice {
-  background-color: #d8d8d8;
+.upload-function .current-voice,
+.color-select button,
+.color-select .current-voice {
+  background-color: rgba(216, 216, 216, 0.5019607843);
   border-radius: 50px;
   padding: 8px 25px 12px 25px;
   color: #5d5d5d;
   font-size: 1rem;
 }
-.upload-function .current-voice {
+.upload-function .current-voice,
+.color-select .current-voice {
   margin-top: 20px;
 }
 @media only screen and (min-width: 900px) {
-  .upload-function button {
+  .upload-function button,
+  .color-select button {
     margin-top: 120px;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .upload .slides-content {
+  .color-select button {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .upload .slides-content, .color-picker .slides-content {
     display: flex !important;
     width: 100%;
   }
-  .upload #slider .container {
+  .upload #slider .container, .color-picker #slider .container {
     display: grid;
   }
 }

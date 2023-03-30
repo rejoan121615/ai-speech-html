@@ -111,6 +111,11 @@ button {
   }
 }
 @media only screen and (min-width: 900px) {
+  #slider .slides svg {
+    display: block;
+  }
+}
+@media only screen and (min-width: 900px) {
   #slider .slides-content {
     display: none;
   }
@@ -125,11 +130,17 @@ button {
 @media only screen and (min-width: 900px) {
   #slider .slider-control {
     position: absolute;
-    left: 10px;
+    left: 20px;
     bottom: 15px;
   }
   #slider .slider-control button {
     width: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #slider .slider-control {
+    left: 25px;
+    bottom: 20px;
   }
 }
 #slider .slider-control button {
@@ -143,7 +154,9 @@ button {
 @media only screen and (min-width: 900px) {
   .wrap {
     display: flex;
-    background-color: #f4f4f4;
+    background: rgb(2, 0, 36);
+    background: transparent linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgb(244, 244, 244) 0%) no-repeat right center;
+    background-size: 90% calc(100% - 10px);
   }
 }
 @media only screen and (min-width: 900px) {
@@ -435,6 +448,10 @@ button {
 .color-select .current-voice {
   margin-top: 20px;
 }
+.upload-function button,
+.color-select button {
+  cursor: pointer;
+}
 @media only screen and (min-width: 900px) {
   .upload-function button,
   .color-select button {
@@ -449,11 +466,13 @@ button {
 }
 
 @media only screen and (min-width: 900px) {
-  .upload .slides-content, .color-picker .slides-content {
+  .upload .slides-content,
+  .color-picker .slides-content {
     display: flex !important;
     width: 100%;
   }
-  .upload #slider .container, .color-picker #slider .container {
+  .upload #slider .container,
+  .color-picker #slider .container {
     display: grid;
   }
 }

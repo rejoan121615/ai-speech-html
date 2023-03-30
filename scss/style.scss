@@ -113,7 +113,7 @@ button {
                 display: none;
             }
         }
-        .large-img {
+        .large-img{
             display: none;
             @include tablet() {
                 display: block;
@@ -125,6 +125,11 @@ button {
                     width: 100%;
                     height: 100%;
                 }
+            }
+        }
+        svg {
+            @include tablet() {
+                display: block;
             }
         }
     }
@@ -145,11 +150,15 @@ button {
         // z-index: 30;
         @include tablet() {
             position: absolute;
-            left: 10px;
+            left: 20px;
             bottom: 15px;
             button {
                 width: 35px;
             }
+        }
+        @include sm-desktop() {
+            left: 25px;
+            bottom: 20px;
         }
         button {
             width: 48px;
@@ -164,7 +173,14 @@ button {
 .wrap {
     @include tablet() {
         display: flex;
-        background-color: #f4f4f4;
+        // background-color: #f4f4f4;
+        background: rgb(2, 0, 36);
+        background: transparent linear-gradient(
+            90deg,
+            rgba(2, 0, 36, 0) 0%,
+            rgba(244, 244, 244, 1) 0%
+        ) no-repeat right center;
+        background-size: 90% calc(100% - 10px);
     }
 
     & > div {
@@ -441,6 +457,7 @@ p {
         margin-top: 20px;
     }
     button {
+        cursor: pointer;
         @include tablet() {
             margin-top: 120px;
         }
@@ -455,7 +472,8 @@ p {
     }
 }
 
-.upload, .color-picker {
+.upload,
+.color-picker {
     @include tablet() {
         .slides-content {
             display: flex !important;
@@ -466,4 +484,3 @@ p {
         }
     }
 }
-

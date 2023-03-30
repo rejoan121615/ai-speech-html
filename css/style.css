@@ -234,6 +234,7 @@ button {
 @media only screen and (min-width: 900px) and (min-width: 1200px) {
   .content-wrap #control-btns #microphone {
     height: 80px;
+    width: 80px;
   }
   .content-wrap #control-btns #microphone img {
     height: initial;
@@ -415,6 +416,41 @@ button {
 @media only screen and (min-width: 1200px) {
   .ai-responce-lg .ai-responce {
     height: initial;
+  }
+}
+
+.upload-function {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.upload-function button,
+.upload-function .current-voice {
+  background-color: #d8d8d8;
+  border-radius: 50px;
+  padding: 8px 25px 12px 25px;
+  color: #5d5d5d;
+  font-size: 1rem;
+}
+.upload-function .current-voice {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 900px) {
+  .upload-function button {
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .upload .slides-content {
+    display: flex !important;
+    width: 100%;
+  }
+  .upload #slider .container {
+    display: grid;
   }
 }
 

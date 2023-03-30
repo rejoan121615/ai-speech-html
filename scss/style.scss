@@ -237,6 +237,7 @@ button {
                 left: 35px;
                 @include sm-desktop() {
                     height: 80px;
+                    width: 80px;
                     img {
                         height: initial;
                     }
@@ -415,6 +416,44 @@ p {
         }
         @include sm-desktop() {
             height: initial;
+        }
+    }
+}
+
+// upload content
+.upload-function {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    button,
+    .current-voice {
+        background-color: #d8d8d8;
+        border-radius: 50px;
+        padding: 8px 25px 12px 25px;
+        color: #5d5d5d;
+        font-size: 1rem;
+    }
+    .current-voice {
+        margin-top: 20px;
+    }
+    button {
+        @include tablet() {
+            margin-top: 120px;
+        }
+    }
+}
+
+.upload {
+    @include tablet() {
+        .slides-content {
+            display: flex !important;
+            width: 100%;
+        }
+        #slider .container {
+            display: grid;
         }
     }
 }
